@@ -610,8 +610,22 @@ footer .social-icons a {
   header .transparent_logo {
     display: none;
   }
+  header .top_header {
+    flex-direction: column;
+  }
   header .top_header .logo_name {
-    display: none;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding-top: 16px;
+  }
+  header .top_header .logo_name h1 {
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+  }
+  header .top_header .logo_name h1 span {
+    font-size: 32px;
   }
   header .logo {
     width: 160px;

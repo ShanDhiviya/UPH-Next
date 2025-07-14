@@ -19,13 +19,13 @@ export const Footer = () =>{
                 </div>
 
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-lg-3 col-md-4 col-sm-6">
                         <Image className="footer-logo" src={AppLogo} alt="Universal Pet Hub Logo" />
                         <h6 className="text-center">
                             Terms of Business Privacy <br/> Policy Press Information
                         </h6>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-lg-3 col-md-4 col-sm-6">
                         <h5 className="text-center">
                             Quick Links
                         </h5>
@@ -58,7 +58,7 @@ export const Footer = () =>{
                             About Us
                         </a>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-lg-3 col-md-4 col-sm-6">
                         <h5 className="text-center">
                             Quick Links
                         </h5>
@@ -73,7 +73,7 @@ export const Footer = () =>{
                         <a href="#">Pet Care Information</a>
                         <a href="#">Contact Us</a>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-lg-3 col-md-4 col-sm-6">
                         <h5 className="text-center">
                             Follow Us
                         </h5>
