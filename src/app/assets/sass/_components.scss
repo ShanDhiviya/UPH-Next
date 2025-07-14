@@ -57,15 +57,6 @@ width:238px;
   }
 }
 
-@include mixins.mobile {
-  header{
-    .top_header {
-      .logo_name{
-        display: none;
-      }
-    }
-  }
-}
 
 // header shaped button
 .shaped-button{
@@ -227,7 +218,7 @@ width: 110%;
 }
 .section-help{
   background: variable.$yellow50;
-  height:380px;
+  min-height:380px;
   border-radius: map-get(variable.$borderRadius, lg);
   @include mixins.softShadow;
   padding: map-get(variable.$gutters, xxl);
@@ -244,6 +235,7 @@ width: 110%;
   a.btn-primary,
   a.btn-default{
     margin-right:12px;
+    margin-bottom:12px;
     text-decoration: none;
     background: variable.$primaryColor;
     display:inline-block;
