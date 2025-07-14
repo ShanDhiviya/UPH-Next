@@ -1,0 +1,53 @@
+// Mobile (<= 480px)
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+// Large Mobile / Small Tablets (481px - 767px)
+@mixin large-mobile {
+  @media (min-width: 481px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+// iPad Portrait (768px - 1023px)
+@mixin ipad-portrait {
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+// iPad Landscape (768px - 1023px)
+@mixin ipad-landscape {
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Small Desktop (1024px - 1279px)
+@mixin small-desktop {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+// Large Desktop (1280px and up)
+@mixin large-desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+
+@mixin body-gradient {
+    background: #0B2C1B;
+    background: linear-gradient(180deg, rgba(11, 44, 27, 1) 0%, rgba(229, 239, 199, .5) 100%);
+}
+
+@mixin softShadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+

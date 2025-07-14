@@ -1,0 +1,20 @@
+
+@use "variable";
+@use "components";
+@use "page";
+@use "overrides";
+@use "mixins";
+
+
+body{
+  font-optical-sizing: auto;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+}
+@include mixins.small-desktop {
+  .container{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+

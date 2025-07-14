@@ -1,103 +1,247 @@
 import Image from "next/image";
+import IconVerification from "@/app/assets/images/icon-blue-star.png";
+import IconEmail from "@/app/assets/images/icon-envlope.png";
+import IconBadge from "@/app/assets/images/icon-badge.png";
+import IneedHelp from "@/app/assets/images/dog-person.png";
+import mainImage from "@/app/assets/images/photo.png";
+import IconDog from "@/app/assets/images/dog-outline.png";
+import IconCat from "@/app/assets/images/cat-outline.png";
+import IconOther from "@/app/assets/images/icon-circles.png";
+import {ShapedTitle} from "@/app/components";
+import DogImageOne from "@/app/assets/images/1.jpeg";
+import DogImageTwo from "@/app/assets/images/2.jpeg";
+import DogImageThree from "@/app/assets/images/3.jpeg";
+import DogImageFour from "@/app/assets/images/4.jpeg";
+import DogImageFive from "@/app/assets/images/5.jpeg";
+import DogImageSix from "@/app/assets/images/6.jpeg";
+import CatImageOne from "@/app/assets/images/c1.jpeg";
+import CatImageTwo from "@/app/assets/images/c2.jpeg";
+import CatImageThree from "@/app/assets/images/c3.jpeg";
+import CatImageFour from "@/app/assets/images/c4.jpeg";
+import CatImageFive from "@/app/assets/images/c5.jpeg";
+import CatImageSix from "@/app/assets/images/c6.jpeg";
 
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+     <article className="article-body">
+         <section className="body-section">
+             <div className="container">
+                 <div className="row">
+                     <div className="col-lg-6">
+                       <div className="main-image-wrapper">
+                            <ShapedTitle/>
+                           <Image src={mainImage} alt="Universal Pet Hub" className="main-image"/>
+                       </div>
+                     </div>
+                     <div className="col-lg-6">
+                         <form className="form-connect-breeders">
+                             <h2>
+                                 Connect with trusted <br/>
+                                 breeders and rescuers
+                             </h2>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+                             <div className="bread-types">
+                                 <div className="hexagon_large">
+                                     <div className="hexagon">
+                                         <button className="hexagon_button">
+                                             <Image src={IconDog} alt="icon-dogs"/>
+                                             <p className="button_text">
+                                                 Dogs
+                                             </p>
+                                         </button>
+                                     </div>
+                                 </div>
+                                 <div className="hexagon_large">
+                                     <div className="hexagon">
+                                         <button className="hexagon_button">
+                                             <Image src={IconCat} alt="icon-dogs"/>
+                                             <p className="button_text">
+                                                 Cats
+                                             </p>
+                                         </button>
+                                     </div>
+                                 </div>
+                                 <div className="hexagon_large">
+                                     <div className="hexagon">
+                                         <button className="hexagon_button">
+                                             <Image src={IconOther} alt="icon-dogs"/>
+                                             <p className="button_text">
+                                               Other
+                                             </p>
+                                         </button>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div className="form-element">
+                                 <div className="icon-arrow-down">
+                                     <i className="fa-solid fa-chevron-down"></i>
+                                 </div>
+                                 <select>
+                                     <option value="-1">
+                                         Select
+                                     </option>
+                                 </select>
+                             </div>
+
+                             <div className="form-element">
+                                 <input type="text" placeholder="Select Location"/>
+                             </div>
+
+                             <div className="form-element no_bg">
+                                 <button type="submit">
+                                     Search
+                                 </button>
+                             </div>
+
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </section>
+         <section className="body-section-gradiant">
+
+            <div className="container">
+                <section className="section-three-tiles">
+                    <div className="row">
+                        <div className="col-sm-12 col-md-4 col-lg-4">
+                            <div className="item">
+                                <div className="item_icon">
+                                    <Image src={IconVerification} alt=""/>
+                                </div>
+                                <h3 className="item_title">
+                                    Robust ID Verification
+                                </h3>
+                                <p className="item_text">
+                                    ID Verified breeders and buyers to make our site even safer and more transparent.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-4 col-lg-4">
+                            <div className="item">
+                                <div className="item_icon">
+                                    <Image src={IconEmail} alt=""/>
+                                </div>
+                                <h3 className="item_title">
+                                    Robust ID Verification
+                                </h3>
+                                <p className="item_text">
+                                    ID Verified breeders and buyers to make our site even safer and more transparent.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-4 col-lg-4">
+                            <div className="item">
+                                <div className="item_icon">
+                                    <Image src={IconBadge} alt="" />
+                                </div>
+                                <h3 className="item_title">
+                                    Robust ID Verification
+                                </h3>
+                                <p className="item_text">
+                                    ID Verified breeders and buyers to make our site even safer and more transparent.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section-help">
+                    <div className="row">
+                        <div className="col-sm-12 col-md-8 col-lg-8">
+                            <h3>
+                                Need Help? We are here to provide a safe start to your lifelong f
+                                friendship
+                            </h3>
+                            <p>
+                                We have a bunch of handy article to answer common questions.
+                                Can&#39;t find what you are looking for ? Contact our dedicated trust and safety team.
+                            </p>
+
+                            <Link href="#" className="btn-primary">
+                                Learn more about pet safety
+                            </Link>
+                            <Link href="#" className="btn-default">
+                                I need help
+                            </Link>
+                        </div>
+                        <div className="col-sm-12 col-md-4 col-lg-4 m-0">
+                            <Image src={IneedHelp} alt=""/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 col-md-6 col-lg-6">
+                        <section className="popular-breeds">
+
+                            <h4>
+                                Popular Dog Breeds
+                            </h4>
+
+                            <div className="images-array">
+
+                                <Image src={DogImageOne} alt=""/>
+                                <Image src={DogImageTwo} alt=""/>
+                                <Image src={DogImageThree} alt=""/>
+                                <Image src={DogImageFour} alt=""/>
+                                <Image src={DogImageFive} alt=""/>
+                                <Image src={DogImageSix} alt=""/>
+
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div className="col-sm-12 col-md-6 col-lg-6">
+                        <section className="popular-breeds">
+                            <h4>
+                                Popular Cat Breeds
+                            </h4>
+                            <div className="images-array">
+
+                                <Image src={CatImageOne} alt=""/>
+                                <Image src={CatImageTwo} alt=""/>
+                                <Image src={CatImageThree} alt=""/>
+                                <Image src={CatImageFour} alt=""/>
+                                <Image src={CatImageFive} alt=""/>
+                                <Image src={CatImageSix} alt=""/>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <section className="top-footer">
+             <div className="container">
+                 <div className="row">
+                     <div className="col-sm-12 col-md-6 col-lg-6 top-footer_left">
+                        <h2>
+                            UNIVERSAL PET HUB
+                            <small>
+                                The one place for everything pets!
+                            </small>
+                        </h2>
+                     </div>
+
+                     <div className="col-sm-12 col-md-6 col-lg-6 top-footer_right">
+                         <h2>
+                             Register for a new Univeral Pet Hub Account
+                             <small>
+                              Create your account, and get ready to connect safely with thousands of adopters and pets rehomers
+                             </small>
+                         </h2>
+                         <a href="#">
+                           REGISTER
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+     </article>
   );
 }

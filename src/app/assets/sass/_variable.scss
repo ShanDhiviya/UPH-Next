@@ -1,0 +1,53 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fontSizes: (
+        xs: 0.75rem,
+        sm: 0.875rem,
+        base: 1rem,
+        md: 1.125rem,
+        lg: 1.25rem,
+        xl: 1.5rem,
+        xxl: 2rem,
+        xxxl: 2.5rem,
+        xxxxl: 3rem
+);
+
+$borderRadius: (
+        xs: 0.25rem,
+        sm: 0.5rem,
+        md: 1rem,
+        lg: 1.5rem,
+        xl: 3rem,
+        xxl: 4rem,
+);
+
+$gutters :(
+        xs: 0.25rem,
+        sm: 0.5rem,
+        md: 1rem,
+        lg: 1.5rem,
+        xl: 3rem,
+        xxl: 4rem,
+);
+
+$fontPrimary:"Bodoni Moda", serif;
+
+$primaryColor:#064A27;
+$primaryColorDark:#0B2C1B;
+$secondaryColor:#9ECB5D;
+$lightGreen:#60FFB0;
+$lightGreen50:#BFF374;
+$lightOrange:#F5B128;
+$lightGreen25:#526C60;
+
+$neutral100:#FFFFFF;
+$neutral0:#000000;
+$yellow50:#FFFACC;
+$green50:#659F17;
+
+@function getFontsize($key) {
+  @return map.get($fontSizes, $key);
+}
+
+
