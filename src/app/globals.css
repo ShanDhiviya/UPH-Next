@@ -55,6 +55,11 @@ header .logo img {
   margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+  header .top_header .logo_name {
+    display: none;
+  }
+}
 .shaped-button {
   display: flex;
   flex-direction: row;

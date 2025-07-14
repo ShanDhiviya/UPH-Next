@@ -3,7 +3,6 @@
 header {
   background: #ffffff;
   height:255px;
-
   .transparent_logo{
     width:250px;
     position: absolute;
@@ -44,7 +43,6 @@ header {
       padding-top:map-get(variable.$gutters,xxl)
     }
   }
-
   .logo{
 position: relative;
     z-index: 110;
@@ -55,6 +53,16 @@ width:238px;
       height:320px;
       display:block;
       margin: 0 auto;
+    }
+  }
+}
+
+@include mixins.mobile {
+  header{
+    .top_header {
+      .logo_name{
+        display: none;
+      }
     }
   }
 }
@@ -356,7 +364,6 @@ h6, h5, h4, p{
     }
   }
 }
-
 .form-connect-breeders{
   display: flex;
   flex-direction: column;
@@ -579,8 +586,6 @@ align-items: center;
     font-family: variable.$fontPrimary;
   }
 }
-
-
 .search-box{
   position:relative;
   width:280px;
@@ -613,7 +618,6 @@ align-items: center;
     font-weight: 500;
   }
 }
-
 .popular-breeds{
   padding:24px 0px;
   h4{
