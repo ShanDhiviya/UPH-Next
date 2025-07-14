@@ -1,12 +1,26 @@
+'use client';
 import Image from "next/image";
 import TransparentLogo from "@/app/assets/images/logo-transparent.png";
 import AppLogo from "@/app/assets/images/logo.png";
 import {ShapedButton} from "@/app/components/Shapes";
 import Link from "next/link";
+import React from "react";
 
 export const Header = () => {
+
+    const [isHeaderOpen, setIsHeaderOpen] = React.useState(false);
+    function toggleHeader(){
+        setIsHeaderOpen(!isHeaderOpen);
+
+    }
     return (
         <header>
+            <button className="mobile-menu-button" onClick={toggleHeader}>
+                {
+                    isHeaderOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>
+                }
+
+            </button>
             <div className="transparent_logo">
                 <Image alt="" src={TransparentLogo} width={211} height={255}/>
             </div>
@@ -24,9 +38,9 @@ export const Header = () => {
                     <div className="logo">
                         <Image src={AppLogo} alt="Universal Pet Hub"/>
                     </div>
-                    <div className="header-form">
+                    <div className={isHeaderOpen ?'header-form header-open':'header-form'}>
                         <div className="d-flex flex-column">
-                        <div className="d-flex">
+                        <div className="d-lg-flex d-md-flex">
                             <div className="header-icons">
                                 <div className="icon-wrapper">
                                     <div className="hexagon-small-wrapper">
@@ -70,7 +84,7 @@ export const Header = () => {
                                 </form>
                             </div>
                         </div>
-                            <div className="d-flex flex-row align-items-center">
+                            <div className="d-lg-flex d-md-flex flex-row align-items-center">
                                 <ShapedButton/>
                                 <div className="user-sign-in">
                                     <img src="https://i.pravatar.cc/150?u=a04258114e29026702d"

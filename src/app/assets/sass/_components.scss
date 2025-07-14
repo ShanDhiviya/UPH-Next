@@ -3,6 +3,9 @@
 header {
   background: #ffffff;
   height:255px;
+  .mobile-menu-button{
+    display:none;
+  }
   .transparent_logo{
     width:250px;
     position: absolute;
@@ -39,6 +42,7 @@ header {
     }
 
     .header-form{
+      opacity:1;
       width:425px;
       padding-top:map-get(variable.$gutters,xxl)
     }
@@ -627,5 +631,27 @@ align-items: center;
     margin-right:12px;
     margin-bottom:12px;
     height:auto;
+  }
+}
+.mobile-menu-button{
+  height:44px;
+  width:44px;
+  border:none;
+  position:absolute;
+  right:10px;
+  top:10px;
+  background: variable.$primaryColor;
+  color: variable.$neutral100;
+  border-radius: 4px;
+  @include mixins.softShadow;
+  transition: .1s ease;
+
+  &:hover{
+    background: variable.$lightGreen50;
+    color: variable.$neutral0;
+  }
+
+  &:active{
+    transform: scale(0.95);
   }
 }

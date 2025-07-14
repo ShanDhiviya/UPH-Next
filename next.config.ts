@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
         images: {
             remotePatterns: [new URL('https://placehold.co/**')],
         },
-   output: 'export',
+   //output: 'export',
     trailingSlash: true, // optional, helps with routing
 
 };

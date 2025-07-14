@@ -4,6 +4,9 @@ header {
   background: #ffffff;
   height: 255px;
 }
+header .mobile-menu-button {
+  display: none;
+}
 header .transparent_logo {
   width: 250px;
   position: absolute;
@@ -39,6 +42,7 @@ header .top_header .logo_name h1 span {
   font-weight: 500;
 }
 header .top_header .header-form {
+  opacity: 1;
   width: 425px;
   padding-top: 4rem;
 }
@@ -603,9 +607,35 @@ footer .social-icons a {
   height: auto;
 }
 
+.mobile-menu-button {
+  height: 44px;
+  width: 44px;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #064A27;
+  color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.1s ease;
+}
+.mobile-menu-button:hover {
+  background: #BFF374;
+  color: #000000;
+}
+.mobile-menu-button:active {
+  transform: scale(0.95);
+}
+
 @media (max-width: 766px) {
   header {
     height: 160px;
+  }
+  header .mobile-menu-button {
+    display: block;
+    position: absolute;
+    z-index: 123;
   }
   header .transparent_logo {
     display: none;
@@ -627,6 +657,22 @@ footer .social-icons a {
   header .top_header .logo_name h1 span {
     font-size: 32px;
   }
+  header .top_header .header-form {
+    padding: 48px 24px 16px 24px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0px;
+    right: 0px;
+    z-index: 120;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  header .top_header .header-form.header-open {
+    opacity: 1;
+  }
   header .logo {
     width: 160px;
     height: auto;
@@ -634,9 +680,6 @@ footer .social-icons a {
   header .logo img {
     width: 160px;
     height: auto;
-  }
-  header .header-form {
-    display: none;
   }
   .triangle-wrapper {
     position: absolute;
