@@ -21,7 +21,7 @@
 
 // iPad Landscape (768px - 1023px)
 @mixin ipad-landscape {
-  @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  @media (min-width: 768px) and (max-width: 1025px) and (orientation: landscape) {
     @content;
   }
 }

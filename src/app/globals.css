@@ -5,10 +5,9 @@ header {
   height: 255px;
 }
 header .mobile-menu-button {
-  display: none;
+  display: block;
 }
 header .transparent_logo {
-  width: 250px;
   position: absolute;
 }
 header .top_header {
@@ -46,6 +45,9 @@ header .top_header .header-form {
   width: 425px;
   padding-top: 4rem;
 }
+header .top_header .header-form.mobile-only {
+  display: none;
+}
 header .logo {
   position: relative;
   z-index: 110;
@@ -57,6 +59,15 @@ header .logo img {
   height: 320px;
   display: block;
   margin: 0 auto;
+}
+
+.header-form {
+  opacity: 1;
+  width: 425px;
+  padding-top: 4rem;
+}
+.header-form.mobile-only {
+  display: none;
 }
 
 .shaped-button {
@@ -585,6 +596,7 @@ footer .social-icons a {
   padding: 0px 16px;
   background: #f1f1f1;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .popular-breeds {
@@ -628,6 +640,77 @@ footer .social-icons a {
   transform: scale(0.95);
 }
 
+nav.app-main-menu {
+  position: relative;
+  background: #FFFFFF;
+  height: 100vh;
+  border-left: thin solid #dee2e6;
+}
+nav.app-main-menu .accordion-body {
+  padding: 0px;
+}
+nav.app-main-menu ul.app-main-menu__list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+nav.app-main-menu ul.app-main-menu__list li.accordion-item {
+  border: none;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item {
+  background: #FFFFFF;
+  display: block;
+  list-style: none;
+  border-bottom: thin solid #dee2e6;
+  border-collapse: collapse;
+  border-top: none;
+  border-radius: 0px;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item a {
+  display: block;
+  text-decoration: none;
+  color: #064A27;
+  font-size: 16px;
+  text-align: left;
+  padding: 16px 20px;
+  border-radius: 0px;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item a:hover {
+  color: #0B2C1B;
+  background: #f1f1f1;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item button {
+  border-radius: 0px;
+  border: none;
+  background: #FFFFFF;
+  color: #000000;
+  outline: 0;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item button:hover {
+  color: #0B2C1B;
+  background: #f1f1f1;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item button:active, nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item .list-group a {
+  display: block;
+  text-decoration: none;
+  color: #064A27;
+  font-size: 16px;
+  text-align: left;
+  padding: 16px 20px;
+  border-radius: 0px;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item .list-group a:hover {
+  color: #0B2C1B;
+}
+nav.app-main-menu ul.app-main-menu__list li.app-main-menu__item .list-group a.active {
+  background: #0B2C1B;
+  color: #BFF374;
+}
+
 @media (max-width: 766px) {
   header {
     height: 160px;
@@ -658,20 +741,7 @@ footer .social-icons a {
     font-size: 32px;
   }
   header .top_header .header-form {
-    padding: 48px 24px 16px 24px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #f1f1f1;
-    top: 0px;
-    right: 0px;
-    z-index: 120;
-    transition: 0.3s;
-    opacity: 0;
-  }
-  header .top_header .header-form.header-open {
-    opacity: 1;
+    display: none;
   }
   header .logo {
     width: 160px;
@@ -680,6 +750,16 @@ footer .social-icons a {
   header .logo img {
     width: 160px;
     height: auto;
+  }
+  .header-form {
+    padding: 24px 24px 16px 24px;
+    display: block;
+    width: 100%;
+    z-index: 120;
+    transition: 0.3s;
+  }
+  .header-form.mobile-only {
+    display: block;
   }
   .triangle-wrapper {
     position: absolute;
@@ -729,6 +809,51 @@ footer .social-icons a {
     text-decoration: none;
     font-weight: 600;
     font-family: "Bodoni Moda", serif;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  header .top_header .header-form {
+    display: none;
+  }
+  .header-form {
+    padding: 24px 24px 16px 24px;
+    display: block;
+    width: 100%;
+    z-index: 120;
+    transition: 0.3s;
+  }
+  .header-form.mobile-only {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) and (orientation: landscape) {
+  header .top_header .header-form {
+    opacity: 0;
+    margin-top: 100px;
+    height: 100px;
+  }
+  header .top_header .logo_name {
+    width: 407px;
+    padding-left: 44px;
+  }
+  header .top_header .logo_name h1 {
+    font-size: 64px;
+  }
+  header .top_header .logo_name h1 span {
+    font-size: 56px;
+  }
+  .header-form {
+    padding: 24px 24px 16px 24px;
+    display: block;
+    width: 100%;
+    z-index: 120;
+    transition: 0.3s;
+  }
+  .header-form.mobile-only {
+    display: block;
+  }
+  .shaped-title .middle-box h2 {
     font-size: 2rem;
   }
 }

@@ -8,23 +8,12 @@ import React from "react";
 
 export const Header = () => {
 
-    const [isHeaderOpen, setIsHeaderOpen] = React.useState(false);
-    function toggleHeader(){
-        setIsHeaderOpen(!isHeaderOpen);
-
-    }
     return (
         <header>
-            <button className="mobile-menu-button" onClick={toggleHeader}>
-                {
-                    isHeaderOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>
-                }
-
-            </button>
             <div className="transparent_logo">
                 <Image alt="" src={TransparentLogo} width={211} height={255}/>
             </div>
-            <div className="container">
+            <div className="container-fluid">
                 <section className="top_header">
                     <div className="logo_name">
                        <Link href="/">
@@ -38,7 +27,7 @@ export const Header = () => {
                     <div className="logo">
                         <Image src={AppLogo} alt="Universal Pet Hub"/>
                     </div>
-                    <div className={isHeaderOpen ?'header-form header-open':'header-form'}>
+                    <div className="header-form">
                         <div className="d-flex flex-column">
                         <div className="d-lg-flex d-md-flex">
                             <div className="header-icons">

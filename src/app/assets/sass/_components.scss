@@ -4,10 +4,9 @@ header {
   background: #ffffff;
   height:255px;
   .mobile-menu-button{
-    display:none;
+display:block;
   }
   .transparent_logo{
-    width:250px;
     position: absolute;
   }
   .top_header {
@@ -44,8 +43,14 @@ header {
     .header-form{
       opacity:1;
       width:425px;
-      padding-top:map-get(variable.$gutters,xxl)
+      padding-top:map-get(variable.$gutters,xxl);
+
+      &.mobile-only{
+        display:none;
+      }
     }
+
+
   }
   .logo{
 position: relative;
@@ -61,6 +66,15 @@ width:238px;
   }
 }
 
+.header-form{
+  opacity:1;
+  width:425px;
+  padding-top:map-get(variable.$gutters,xxl);
+
+  &.mobile-only{
+    display:none;
+  }
+}
 
 // header shaped button
 .shaped-button{
@@ -612,6 +626,7 @@ align-items: center;
     padding:0px 16px;
     background:#f1f1f1;
     font-weight: 500;
+    font-size:14px;
   }
 }
 .popular-breeds{
@@ -654,4 +669,94 @@ align-items: center;
   &:active{
     transform: scale(0.95);
   }
+}
+
+
+
+nav.app-main-menu{
+  position:relative;
+  background: variable.$neutral100;
+  height: 100vh;
+  border-left:thin solid #dee2e6;
+
+  .accordion-body{
+    padding:0px;
+  }
+ ul.app-main-menu__list{
+   margin:0px;
+   padding:0px;
+   list-style:none;
+
+
+   li.accordion-item{
+     border:none;
+   }
+
+   li.app-main-menu__item,
+  {
+     background: variable.$neutral100;
+     display:block;
+     list-style:none;
+     border-bottom:thin solid #dee2e6;
+     border-collapse: collapse;
+     border-top:none;
+     border-radius: 0px;
+     a{
+       display:block;
+       text-decoration:none;
+         color: variable.$primaryColor;
+       font-size:16px;
+       text-align:left;
+       padding:16px 20px;
+       border-radius: 0px;
+       &:hover{
+         color: variable.$primaryColorDark;
+         background: #f1f1f1;
+
+       }
+     }
+
+     button{
+       border-radius: 0px;
+       border:none;
+       background: variable.$neutral100;
+       color: variable.$neutral0;
+       outline: 0;
+
+       &:hover{
+         color: variable.$primaryColorDark;
+         background: #f1f1f1;
+       }
+       &:active,
+       &:focus{
+         outline:0;
+         box-shadow: none;
+       }
+     }
+     .list-group{
+       a{
+         display:block;
+         text-decoration:none;
+         color: variable.$primaryColor;
+         font-size:16px;
+         text-align:left;
+         padding:16px 20px;
+         border-radius: 0px;
+         &:hover{
+           color: variable.$primaryColorDark;
+
+         }
+         &.active{
+           background: variable.$primaryColorDark;
+           color: variable.$lightGreen50;
+         }
+       }
+     }
+   }
+
+
+
+
+
+ }
 }

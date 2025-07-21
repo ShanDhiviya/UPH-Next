@@ -22,8 +22,10 @@ import CatImageFive from "@/app/assets/images/c5.jpeg";
 import CatImageSix from "@/app/assets/images/c6.jpeg";
 
 import Link from "next/link";
+import AppDrawer from "@/app/components/AppDrawer";
 export default function Home() {
   return (
+      <AppDrawer>
      <article className="article-body">
          <section className="body-section">
              <div className="container">
@@ -243,5 +245,6 @@ export default function Home() {
          </section>
 
      </article>
+      </AppDrawer>
   );
 }
