@@ -6,7 +6,6 @@ import {Footer} from "@/app/components/Footer";
 import Link from "next/link";
 import {ShapedButton} from "@/app/components/Shapes";
 
-
 const AppDrawer = ({
                        children,
                    }: Readonly<{
@@ -28,7 +27,7 @@ const AppDrawer = ({
     }, [isMenuOpen]);
 
     useEffect(() => {
-        swiperRef.current = new Swiper('.swiper', {
+        swiperRef.current = new Swiper('.app-drawer-swiper', {
             slidesPerView: 'auto',
             initialSlide: 0,
             resistanceRatio: 0,
@@ -48,7 +47,7 @@ const AppDrawer = ({
     }, []);
 
     return (
-        <div className="swiper">
+        <div className="swiper app-drawer-swiper">
             <div className="swiper-wrapper">
                 <div className="swiper-slide content">
                     <button className="mobile-menu-button" onClick={toggleHeader}>
@@ -124,6 +123,9 @@ const AppDrawer = ({
                         <ul className="accordion app-main-menu__list">
                             <li className="app-main-menu__item">
                                 <Link href="/">Home</Link>
+                            </li>
+                            <li className="app-main-menu__item">
+                                <Link href="/details">Details</Link>
                             </li>
                             <li className="app-main-menu__item">
                                 <Link href="/">About Us</Link>
