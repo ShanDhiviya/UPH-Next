@@ -1,0 +1,136 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mediaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carouselWrapper {
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageSwiper,
+.videoSwiper {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.imageSlide,
+.videoSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.imageSlide img,
+.videoSlide video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.category {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border-radius: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c5282;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.description h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.addToCart {
+  margin-top: auto;
+  padding: 1rem 2rem;
+  background: #2c5282;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addToCart:hover {
+  background: #1a365d;
+}
+
+/* Swiper custom styles */
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: #2c5282;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #2c5282;
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+}
