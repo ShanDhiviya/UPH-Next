@@ -1,10 +1,12 @@
-/* Custom styles for Swiper */
-:global(.swiper) {
+
+.swiperContainer :global(.swiper) {
   padding-bottom: 3rem !important;
 }
 
-:global(.swiper-button-next),
-:global(.swiper-button-prev) {
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev),
+.swiperContainer .swiper-button-prev,
+.swiperContainer .swiper-button-next{
   color: #000 !important;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
@@ -13,24 +15,26 @@
   transition: all 0.3s ease;
 }
 
-:global(.swiper-button-next:hover),
-:global(.swiper-button-prev:hover) {
+.swiperContainer :global(.swiper-button-next:hover),
+.swiperContainer :global(.swiper-button-prev:hover),
+.swiperContainer .swiper-button-prev:hover,
+.swiperContainer .swiper-button-next:hover {
   background-color: rgba(255, 255, 255, 0.9);
   transform: scale(0.75);
 }
 
-:global(.swiper-pagination-bullet) {
+.swiperContainer :global(.swiper-pagination-bullet) {
   width: 10px !important;
   height: 10px !important;
   background-color: #000 !important;
   opacity: 0.5 !important;
 }
 
-:global(.swiper-pagination-bullet-active) {
+.swiperContainer :global(.swiper-pagination-bullet-active) {
   opacity: 1 !important;
 }
 
-:global(.swiper-slide) {
+.swiperContainer :global(.swiper-slide) {
   height: auto;
   display: flex;
   align-items: center;
@@ -38,15 +42,15 @@
 }
 
 /* Add shadow to images */
-:global(.swiper-slide img) {
+.swiperContainer :global(.swiper-slide img) {
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  :global(.swiper-button-next),
-  :global(.swiper-button-prev) {
+  .swiperContainer :global(.swiper-button-next),
+  .swiperContainer :global(.swiper-button-prev) {
     padding: 1.5rem;
     transform: scale(0.6);
   }
@@ -57,4 +61,12 @@
 }
 .carouselContainer {
     height:50vh;
+}
+
+.detailSection{
+  position: relative;
+  background: #0B2C1B;
+  padding: 156px 0px 24px 0px !important;
+  margin-top: 20px;
+  margin-bottom: 36px;
 }
