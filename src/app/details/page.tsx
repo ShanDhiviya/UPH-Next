@@ -31,6 +31,14 @@ export default function DetailsPage() {
 
     return (
          <AppDrawer>
+             <section className="pet-details-section">
+                 <h1>
+                        Pet Details
+                 </h1>
+                 <p>
+                     Universal Pet Hub is dedicated to providing compassionate and comprehensive care for your beloved pets. Our experienced team offers a wide range of veterinary services in a welcoming environment, ensuring every pet receives the attention they deserve. At Universal Pet Hub, your pet’s health and happiness are our top priorities.
+                 </p>
+             </section>
              <section className="image-gallery-section">
                  <div className="">
                      <h1 className="page-title">Image Gallery</h1>
